@@ -1,0 +1,37 @@
+{
+  "name": "pi-ghostty-web",
+  "version": "0.1.0",
+  "description": "Pi extension providing web-based terminal access via ghostty-web",
+  "type": "module",
+  "keywords": [
+    "pi",
+    "pi-package",
+    "terminal",
+    "web-terminal",
+    "ghostty",
+    "ghostty-web",
+    "mobile",
+    "tmux"
+  ],
+  "author": "nicepkg",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicepkg/pi-ghostty-web.git"
+  },
+  "pi": {
+    "extensions": ["./src/index.ts"]
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "dependencies": {
+    "@lydell/node-pty": "^1.1.0",
+    "ghostty-web": "^0.3.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.14"
+  }
+}
