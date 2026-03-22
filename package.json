@@ -13,11 +13,11 @@
     "mobile",
     "tmux"
   ],
-  "author": "nicepkg",
+  "author": "picassio",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicepkg/pi-ghostty-web.git"
+    "url": "https://github.com/picassio/pi-ghostty-web.git"
   },
   "pi": {
     "extensions": ["./src/index.ts"]

@@ -13,7 +13,7 @@ pi install npm:pi-ghostty-web
 Or from git:
 
 ```bash
-pi install git:github.com/nicepkg/pi-ghostty-web
+pi install git:github.com/picassio/pi-ghostty-web
 ```
 
 ## Usage
